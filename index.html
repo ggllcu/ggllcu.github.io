@@ -1,0 +1,808 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/iaia.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+
+		<style>
+			.subsection-title {
+				border-bottom: 2px solid #900;
+				margin-bottom: 40px;
+				padding-bottom: 10px;
+			}
+			.columns {
+				display: flex;
+				justify-content: space-around;
+			}
+			.column {
+				flex: 1;
+			}
+			.column-centered {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+			}
+			.progress {
+				/* color: #990000 !important; */
+				height: 5px !important;
+			}
+			.section-title {
+				/* background-color: rgb(153,0,0);
+				color: #fff !important; */
+				/* border-top: 2px solid rgb(153,0,0) !important; */
+				border-bottom: 2px solid rgb(153,0,0) !important;
+				padding: 10px 50px;
+				margin: 0 auto;
+				width: 50%;
+				/* width: max-content; */
+			}
+			.title-slide .title {
+				width: 100%;
+				border-bottom: 2px solid rgb(153,0,0) !important;
+				padding-bottom: 30px;
+			}
+			.title-slide div {
+				font-size: 80% !important;
+				margin: 30px;
+				line-height: 1.5;
+			}
+			img {
+				border: 1px solid rgb(0,0,0);
+				box-shadow: 5px 5px 0px 0px rgb(153,0,0,0.3);
+			}
+			.no-border {
+				border: 0 !important;
+			}
+			.bold {
+				font-weight: 700;
+			}
+			.no-bold {
+				font-weight: 300 !important;
+			}
+			.description .column {
+				text-align: left;
+				flex-basis: 75%;
+			}
+			.description .column:first-child {
+				font-weight: 600;
+				text-align: right;
+				flex-basis: 25%;
+				padding-right: 20px;
+			}
+			table {
+				font-size: 80%;
+			}
+			table td {
+				text-align: center !important;
+			}
+			table tr:first-child, table td:first-child{
+				font-weight: 600;
+				text-align: left !important;
+			}
+			.small-table {
+				font-size: 70%;
+			}
+			.large-table {
+				font-size: 100%;
+			}
+			.centered-table td {
+				text-align: center !important;
+			}
+			.results-table td:last-child{
+				background-color: #ddd;
+			}
+			.above-list {
+				margin-top: -150px;
+			}
+			.arrow {
+				font-family: 'Fira Code', monospace;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<!-- Titolo -->
+				<section class="title-slide">
+					<div class="title">
+						<h2>
+							La quantificazione dello iodio nel parenchima cerebrale dopo stroke ischemico mediante Dual Energy CT
+						</h2>
+					</div>
+					<div class="author">
+						<h3>
+							Dr.ssa Ilaria Testa <br>
+							10 novembre 2020
+						</h3>
+					</div>
+					<div class="institute">	
+						<h4>
+							Scuola di Specializzazione in Radiodiagnostica <br>
+							Università di Verona <br>
+							Anno Accademico 2018/2019
+						</h4>
+					</div>
+					<aside class="notes">
+						Buonasera a tutti. La mia tesi ha come oggetto ...
+					</aside>
+				</section>
+				
+				<!-- Introduzione -->
+				<section>
+					<div class="section-title">
+						<h2>
+							Introduzione
+						</h2>
+					</div>
+					<aside class="notes">
+						Attualmente il protocollo radiologico per la diagnosi di stroke...
+					</aside>
+				</section>
+
+				<!-- Introduzione: Imaging -->
+				<section>
+					<div class='subsection-title'>
+						<h3>Imaging dello stroke ischemico</h3>
+					</div>
+					<div class="columns">
+						<div class="column">
+							<h4>TC Nativa</h4>
+							<img src="./images/nativa.png" style="width: 50%;">
+							<ul>
+								<li>riconoscimento segni di ischemia</li>
+								<li>esclusione emorragie</li>
+							</ul>
+						</div>
+						
+						<div class="column">
+							<h4>Angio-TC multifasica</h4>
+							<img src="./images/angiotc.jpg" style="width: 60%;">
+							<ul>
+								<li>identificazione occlusione arteriosa</li>
+								<li>valutazione circoli collaterali</li>
+							</ul>
+						</div>
+					</div>
+					<aside class="notes">
+						Attualmente il protocollo radiologico per la diagnosi di stroke consiste in una TC nativa, che ha lo scopo di ... e una angio-TC dei vasi del collo ed intracranici.  <br>
+						Da qualche anno, in molti centri, tra cui l’ospedale di Bolzano, si esegue una Angio-TC multifasica, che consiste nell’acquisizione di tre fasi consecutive a distanza di 8 secondi l’una dall’altra, allo scopo non solo di ... che hanno un ruolo molto importante nello stroke perchè consentono la vascolarizzazione per via retrograda delle aree cerebrali interessate dall’occlusione e inoltre correlano con un miglior outcome.
+					</aside>
+				</section>
+
+				<!-- Obiettivi -->
+				<section>
+					<div class="section-title">
+						<h2>
+							Obiettivi
+						</h2>
+					</div>
+					<aside class="notes">
+						Lo scopo principale di questo lavoro è...
+					</aside>
+				</section>
+
+				<!-- Obiettivi: Obiettivi -->
+				<section>
+					<div class='subsection-title'>
+						<h3>Obiettivi</h3>
+					</div>
+					<ul>
+						<li>Valutare l’applicazione della DECT nella diagnosi precoce di stroke ischemico</li>
+						<li>Sfruttare la capacità della DECT di quantificare il contenuto di iodio in un volume di tessuto</li>
+						<li>Valutare se l’analisi quantitativa del contenuto di iodio nel parenchima cerebrale possa essere predittiva di un’ischemia</li>
+					</ul>
+					<aside class="notes">
+						Lo scopo principale di questo lavoro è quello di ... <br>
+						In particolare, si è esplorata la possibilità di eseguire l’angio-TC multifasica con tecnica Dual Energy, sfruttando la capacità di questa metodica di ... allo scopo di individuare differenze nella perfusione cerebrale tra i due emisferi in pazienti con sospetto stroke ischemico. <br>
+						L’obiettivo finale `e quindi quello di valutare se ... anche dopo TC nativa negativa per ischemia cerebrale.
+					</aside>
+				</section>
+
+				<!-- Dual Energy -->
+				<section>
+					<div class="section-title">
+						<h2>
+							Dual Energy CT
+						</h2>
+					</div>
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<!-- Dual Energy: Dual Energy CT -->
+				<section>
+					<div class='subsection-title'>
+						<h3>Dual Energy CT</h3>
+					</div>
+					
+					<div class="columns">
+						<div class="column">
+							<h4>Dual Source CT</h4>
+							<video data-autoplay src="./images/DualSource_Long_Cut.mp4"></video>
+						</div>
+						
+						<div class="column">
+								<ul>
+									<li>Acquisizione delle immagini a due diversi Kilovoltaggi (80 kVp e 140 kVp)</li>
+									<li>Elaborazione delle immagini mediante post processing</li>
+									<li>Caratterizzazione tissutale</li>
+									<li>Dose paragonabile alla Single Energy</li>
+								</ul>
+							<div class="fragment">
+								<img src="./images/materiali.png" style="width: 50%;">
+							</div>
+						</div>
+					</div>
+					<aside class="notes">
+						La tecnologia Dual Energy consiste nell’acquisizione ... <br> 
+						Una delle tecniche utilizzate è quella della Dual Source CT, che prevede la presenza di due sorgenti di raggi X e di due detettori corrispondenti, montati su un unico gantry, con le due coppie tubo-detettore posizionate a circa 90° l’una rispetto all’altra. <br>
+						I due set di immagini vengono poi elaborati mediante post-processing e consentono la caratterizzazione tissutale grazie alla decomposizione dei materiali. Quindi due materiali che ad una determinata energia hanno valori di attenuazione molto simili e quindi sono difficilmente distinguibili, possono essere distinti acquisendo le immagini anche ad un altro kilovoltaggio. Tutto ciò ad una dose ...
+					</aside>
+				</section>
+
+				<!-- Materiali e Metodi -->
+				<section>
+					<div class="section-title">
+						<h2>
+							Materiali e Metodi
+						</h2>
+					</div>
+					<aside class="notes">
+						Sono stati inclusi nello studio ...
+					</aside>
+				</section>
+
+				<!-- Materiali e Metodi: Selezione dei pazienti -->
+				<section>
+					<div class='subsection-title'>
+						<h3>Selezione dei pazienti</h3>
+					</div>
+					<div class="columns">
+						<div class="column">
+							<p>
+								65 pazienti <br>
+								sospetto stroke del circolo anteriore
+							</p>
+							<div class="columns description">
+								<div class="column">
+									<p>
+										Gruppo 1:<br> (18 p)
+									</p>
+								</div>
+								<div class="column">
+									<p>
+										riscontro di occlusione arteriosa all’angio-TC
+									</p>
+								</div>
+							</div>
+							<div class="columns description">
+								<div class="column">
+									<p>
+										Gruppo 2:<br> (12 p)
+									</p>
+								</div>
+								<div class="column">
+									<p>
+										angio-TC negativa e riscontro di lesioni ischemiche al controllo
+									</p>
+								</div>
+							</div>
+							<div class="columns description">
+								<div class="column">
+									<p>
+										Negativi:<br> (35 p)
+									</p>
+								</div>
+								<div class="column">
+									<p>
+										angio-TC e controllo TC e/o RM negativi
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="column">
+							<table>
+								<tbody>
+									<tr>
+										<td>N. Pazienti</td>
+										<td class="no-bold">30</td>
+									</tr>
+									<tr>
+										<td>Età media</td>
+										<td>78 pm 10</td>
+									</tr>
+									<tr>
+										<td class="no-border">Sesso</td>
+									</tr>
+									<tr>
+										<td class="no-border no-bold">M</td>
+										<td class="no-border">15</td>
+									</tr>
+									<tr>
+										<td class="no-bold">F</td>
+										<td>15</td>
+									</tr>
+									<tr>
+										<td class="no-border">Lato Occlusione</td>
+									</tr>
+									<tr>
+										<td class="no-border no-bold">Destra</td>
+										<td class="no-border">15</td>
+									</tr>
+									<tr>
+										<td class="no-bold">Sinistra</td>
+										<td>15</td>
+									</tr>
+									<tr>
+										<td class="no-border bold">Sede Occlusione</td>
+									</tr>
+									<tr>
+										<td class="no-border no-bold">ACI</td>
+										<td class="no-border">4</td>
+									</tr>
+									<tr>
+										<td class="no-border no-bold">M1</td>
+										<td class="no-border">8</td>
+									</tr>
+									<tr>
+										<td class="no-bold">M2</td>
+										<td>6</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					
+					<aside class="notes">
+						Sono stati inclusi nello studio 65 pazienti con sospetto stroke del circolo anteriore, che sono stati suddivisi in tre gruppi. Un primo gruppo, costituito da 18 pazienti, in cui è stata riscontrata un’occlusione di un ramo arterioso all’angio-TC, un secondo gruppo di 12 pazienti, con angio-TC negativa ma riscontro di lesioni ischemiche al controllo radiologico successivo, e infine un gruppo di 35 pazienti negativi sia all’angio-TC eseguita in PS sia ai successivi controlli TC o RM, che sono stati inseriti nel gruppo di controllo. <br>
+						In tabella si possono vedere i dati clinici della popolazione in studio.
+					</aside>
+				</section>
+
+				<!-- Materiali e Metodi: Protocollo TC -->
+				<section>
+					<div class='subsection-title'>
+						<h3>Protocollo TC</h3>
+					</div>
+					<div class="columns">
+						<div class="column">
+							<p>
+								<ul>
+									<li>TC nativa in Single Energy (120 kVp)</li>
+									<li class="fragment">
+										Angio-TC trifasica in Dual Energy <br> (80 kVp / Sn140 kVp)
+										<ul>
+											<li>80 ml mezzo di contrasto iodato</li>
+											<li>50 ml NaCl</li>
+											<li>Flusso 5 ml/sec</li>
+											<li>Delay tra le scansioni: 8 secondi</li>
+										</ul>
+									</li>
+								</ul>
+							</p>
+						</div>
+						
+						<div class="column fragment">
+							<img src="./images/cta.jpg" style="width: 75%;">
+						</div>
+					</div>
+					<aside class="notes">
+						Tutti i pazienti sono stati sottoposti a ... <br>
+						L’angio-TC è stata eseguita dopo somministrazione di ... <br>
+						Le tre fasi sono state acquisite tutte in senso caudo-craniale, con un delay di 8 secondi l’una dall’altra. La prima fase è stata acquisita dall’arco aortico fino al vertice, le due successive dalla base cranica al vertice.
+					</aside>
+				</section>
+
+				<!-- Materiali e Metodi: Analisi delle immagini -->
+				<section>
+					<div class='subsection-title'>
+						<h3>Analisi delle immagini</h3>
+					</div>
+					<p>"Brain Haemorrhage": mappa dello iodio</p>
+					<div class="columns">
+						<div class="column column-centered" style="flex: 0 0 25%;">
+							<img src="./images/aspects_1.jpg" style="width:100">
+							<p>
+								<ul>
+									<li class="fragment">Zona A: M1, M2, M3</li>
+									<li class="fragment">Zona C: I, C, L, IC</li>
+								</ul>
+							</p>
+						</div>
+						
+						<div class="column" style="flex: 0 0 35%;">
+							<img src="./images/Joppi_ac.png" style="width: 100%;">
+						</div>
+					</div>
+					Syngo.via VB30, SIEMENS
+					<aside class="notes">
+						Le immagini sono state valutate utilizzando il software Syngo.via della SIEMENS, in particolare l’applicativo ”Brain Haemorrhage”, che mostra la distribuzione e la concentrazione dello Iodio all’interno di un tessuto, creando una vera e propria mappa dello Iodio. <br>  
+						All'interno di ciascun emisfero cerebrale sono state individuate tre zone di interesse, ricalcando le regioni dell’ASPECTS. In particolare sono state individuate, a livello dei nuclei della base, le zone: A e C.
+					</aside>
+				</section>
+
+				<!-- Materiali e Metodi: Analisi delle immagini -->
+				<section>
+					<div class='subsection-title'>
+						<h3>Analisi delle immagini</h3>
+					</div>
+					<div class="columns">
+						<div class="column" style="flex: 0 0 28%;">
+							<img src="./images/aspects_2.jpg" style="width:100">
+							<p>
+								<ul>
+									<li>Zona B: M4, M5, M6</li>
+								</ul>
+							</p>
+						</div>
+						
+						<div class="column" style="flex: 0 0 40%;">
+							<img src="./images/Joppi_b.png" style="width: 100%;">
+						</div>
+					</div>
+					Syngo.via VB30, SIEMENS
+					<aside class="notes">
+						A livello sovraganglionare, la zona B. <br>
+						Per ciascuna di queste zone, è stata misurata una ROI delineata a mano libera, per ciascuna delle tre fasi dell’esame. Per ogni ROI presa in considerazione, il software misura diversi parametri, tra cui la Iodine Density, misurata in mg/mL, che è il parametro che è stato preso in considerazione in questo lavoro.
+					</aside>
+				</section>
+
+				 <!-- Risultati -->
+				 <section>
+					<div class="section-title">
+						<h2>
+							Risultati
+						</h2>
+					</div> 
+					<aside class="notes">
+						Sono stati quindi raccolti tutti i valori ...
+					</aside>
+				</section>
+
+				<!-- Risultati: Iodine Density -->
+				<section data-auto-animate>
+					<div class='subsection-title'>
+						<h3>Iodine Density</h3>
+					</div>
+					<p>
+						Valori di Iodine Density relativi alle diverse zone di interesse, ottenuti per ciascuna fase contrastografica, nei due gruppi di pazienti
+					</p>
+
+					<div class="columns">
+						<div class="column">
+							<h4>Gruppo 1</h4>
+							<img src="./images/tabella_valori_1.png" style="width:100">	
+						</div>
+						<div class="column">
+							<h4>Gruppo 2</h4>
+							<img src="./images/tabella_valori_2.png" style="width:100">	
+						</div>
+					</div>
+
+					<aside class="notes">
+						... e sono stati poi messi in relazione con la presenza di ischemia valutata retrospettivamente all’indagine TC o RM di controllo.
+					</aside>
+				</section>
+
+				<!-- Risultati: Iodine Density -->
+				<section data-auto-animate>
+					<div class='subsection-title'>
+						<h3>Iodine Density</h3>
+					</div>
+					<p>
+						Calcolo dei valori medi per gruppo
+					</p>
+
+					<div class="columns">
+						<div class="column">
+							<h4>Gruppo 1</h4>
+							<table class="small-table">
+								<tr>
+									<td></td>
+									<td>Fase 1</td>
+									<td>Fase 2</td>
+									<td>Fase 3</td>
+								</tr>
+								<tr>
+									<td>Sano</td>
+									<td>0.73</td>
+									<td>0.53</td>
+									<td>0.27</td>
+								</tr>
+								</tr>
+								<tr>
+									<td>Patologico</td>
+									<td>0.64</td>
+									<td>0.73</td>
+									<td>0.41</td>
+								</tr>
+							</table>
+						</div>
+						<div class="column">
+							<h4>Gruppo 2</h4>
+							<table class="small-table">
+								<tr>
+									<td></td>
+									<td>Fase 1</td>
+									<td>Fase 2</td>
+									<td>Fase 3</td>
+								</tr>
+								<tr>
+									<td>Sano</td>
+									<td>0.71</td>
+									<td>0.51</td>
+									<td>0.25</td>
+								</tr>
+								</tr>
+								<tr>
+									<td>Patologico</td>
+									<td>0.68</td>
+									<td>0.69</td>
+									<td>0.31</td>
+								</tr>
+							</table>
+						</div>
+						<div class="column">
+							<h4>Negativi</h4>
+							<table class="small-table">
+								<tr>
+									<td></td>
+									<td>Fase 1</td>
+									<td>Fase 2</td>
+									<td>Fase 3</td>
+								</tr>
+								<tr>
+									<td>Emisfero Dx</td>
+									<td>0.80</td>
+									<td>0.58</td>
+									<td>0.31</td>
+								</tr>
+								</tr>
+								<tr>
+									<td>Emisfero Sn</td>
+									<td>0.75</td>
+									<td>0.55</td>
+									<td>0.29</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="fragment fade-in-then-out">
+						<p>
+							<ul>
+								<li>Non ci sono differenze sostanziali tra i valori assoluti di I.D.</li>
+								<li>Non è possibile stabilire un cut-off assoluto</li>
+								<li>Nella aree ischemiche il valore di I.D. è maggiore nella seconda fase contrastografica</li>
+								<li>Nelle aree sane la I.D. è maggiore nella prima fase</li>
+							</ul>
+						</p>
+					</div>
+					<div class="columns fragment fade-up above-list">
+						<div class="column">
+							<img src="./images/Avg_Gr_1.png" style="width:100">		
+						</div>
+						<div class="column">
+							<img src="./images/Avg_Gr_2.png" style="width:100">		
+						</div>
+						<div class="column">
+							<img src="./images/Avg_Gr_3.png" style="width:100">		
+						</div>
+					</div>
+
+					<aside class="notes">
+						Sono stati calcolati poi i valori medi di Iodine Density delle aree sane e patologiche nei due gruppi e in un campione di pazienti sani. <br>
+						Da questi risultati si evince innanzitutto che ... delle aree sane e quelli delle aree patologiche, anche confrontandoli con i valori medi del gruppo di pazienti sani, quindi non `e possibile stabilire un valore di cutoff che indichi in maniera univoca la presenza di ischemia. <br>
+						Un dato interessante è che ... Da questa osservazione ci è venuta l’idea di inserire questi dati all’interno di grafici in funzione del tempo.
+					</aside>
+				</section>
+
+				<!-- Risultati: Iodine Density -->
+				<section data-auto-animate>
+					<div class='subsection-title'>
+						<h3>Iodine Density</h3>
+					</div>
+					<div class="columns">
+						<div class="column">
+							<img src="./images/Avg_Gr_1.png" style="width:100">		
+						</div>
+						<div class="column">
+							<img src="./images/Avg_Gr_2.png" style="width:100">		
+						</div>
+						<div class="column">
+							<img src="./images/Avg_Gr_3.png" style="width:100">		
+						</div>
+					</div>
+
+					<div class="fragment">
+						<p></p>
+						<ul>
+							<li><strong>Pattern sano: </strong>picco di Iodine Density nella prima fase</li>
+							<li><strong>Pattern patologico: </strong>picco di Iodine Density nella seconda fase</li>
+						</ul>
+					</div>
+
+					<div class="fragment">
+						<p></p>
+						<table class="centered-table results-table">
+							<tr>
+								<td></td>
+								<td>Gruppo 1</td>
+								<td>Gruppo 2</td>
+								<td>Totale</td>
+							</tr>
+							<tr>
+								<td>Sensibilità</td>
+								<td>79%</td>
+								<td>59%</td>
+								<td>73%</td>
+							</tr>
+							</tr>
+							<tr>
+								<td>Specificità</td>
+								<td>92%</td>
+								<td>91%</td>
+								<td>92%</td>
+							</tr>
+							</tr>
+							<tr>
+								<td>Valore predittivo positivo</td>
+								<td>87%</td>
+								<td>66%</td>
+								<td>81%</td>
+							</tr>
+							</tr>
+							<tr>
+								<td>Valore predittivo negativo</td>
+								<td>87%</td>
+								<td>87%</td>
+								<td>87%</td>
+							</tr>
+							<tr>
+								<td>Validità del test</td>
+								<td>87%</td>
+								<td>83%</td>
+								<td>86%</td>
+							</tr>
+						</table>
+					</div>
+
+					<aside class="notes">
+						Da questi grafici è evidente come le aree sane e quelle patologiche mostrino due diversi andamenti del contenuto di Iodio. <br>
+						Possiamo quindi distinguere due pattern: uno sano, cioè con un picco di ID nella prima fase seguito da un rapido washout, e un pattern patologico, cioè con incremento più lento del contenuto della I.D. e picco nella seconda fase contrastografica. <br>
+						Mettendo quindi in relazione, per ogni area considerata, la forma del grafico con il dato radiologico ottenuto con TC o RM di controllo, sono state calcolate ...
+					</aside>
+				</section>
+
+				<!-- Conclusioni -->
+				<section>
+					<div class="section-title">
+						<h2>
+							Conclusioni
+						</h2>
+					</div>
+					<aside class="notes">
+						Dai risultati si evince che ...
+					</aside>
+				</section>
+
+				<!-- Conclusioni: Specificità e sensibilità -->
+				<section data-auto-animate>
+					<div class='subsection-title'>
+						<h3>Specificità e sensibilità</h3>
+					</div>
+
+					<div class="">
+						<ul>
+							<li>Elevata specificità nei due gruppi: <strong>92%</strong></li>
+							<li>Sensibilità maggiore nel Gruppo 1 rispetto al Gruppo 2: <strong>73%</strong> vs <strong>59%</strong></li>
+							<ul>								
+								<li class="fragment">Ridotte dimensioni dell'area ischemica</li>
+								<li class="fragment">Competenza dei circoli collaterali</li>
+								<li class="fragment">Intervallo di tempo tra l'esordio dei sintomi e l'angio-TC</li>
+								<li class="fragment">Eventuali stenosi a monte</li>
+							</ul>
+						</ul>
+					</div>
+
+					<aside class="notes">
+						Dai risultati si evince che la valutazione dell'andamento del contenuto di Iodio permette di riconoscere precocemente le aree ischemiche con elevata specificità in tutti i pazienti. Per quanto riguarda invece la sensibilità, questa è maggiore nel gruppo di pazienti con angio-TC positiva, rispetto al gruppo dei pazienti con angio-TC negativa e riscontro di ischemia al controllo successivo. In questi pazienti la sensibilità è di appena il 59%. <br>
+						I motivi di questa bassa sensibilità nel secondo gruppo di pazienti e quindi di questa discrepanza tra le aree ischemiche e i grafici di tipo patologico possono essere diversi: tra questi ... <br>
+						stenosi a monte che possono determinare un rallentamento del flusso con conseguente ritardata opacizzazione dei vasi intracranici. È necessario quindi correlare sempre i dati ottenuti dalla valutazione quantitativa del contenuto di Iodio con questi fattori.
+					</aside>
+				</section>
+
+				<!-- Conclusioni: Limiti e sviluppi -->
+				<section data-auto-animate>
+					<div class='subsection-title'>
+						<h3>Limiti e sviluppi</h3>
+					</div>
+
+					<div class="columns">
+						<div class="column">
+							<ul class="fragment">
+								<li>Scarsa risoluzione delle misurazioni del software</li>
+								<li>Scarsa praticità in regime di urgenza</li>
+							</ul>
+						</div>
+						<div class="column" style="flex: 0 0 10%;">
+							<ul class="fragment" style="list-style: none;">
+								<li><span class="arrow">-></span></li>
+								<li>&nbsp;</li>
+								<li><span class="arrow">-></span></li>
+							</ul>
+						</div>
+						<div class="column">
+							<ul class="fragment" style="list-style: none;">
+								<li>Software più risoluti, quindi misurazioni più precise</li>
+								<li>Mappe colore con visualizzazione diretta del contenuto di iodio</li>
+							</ul>
+						</div>
+					</div>
+
+					<aside class="notes">
+						I principali svantaggi di questa metodica sono due: per prima cosa ... che restituisce dei valori che si limitano alla prima cifra decimale, e in secondo luogo ... le misurazioni e l'analisi dei dati richiedono al radiologo molto tempo e sono quindi di scarsa utilità in regime di Pronto Soccorso. <br>
+						In futuro, si potrebbe implementare lo sviluppo di software più risoluti, che permettano di ottenere misurazioni più precise, con la possibilità di creare delle mappe colore che consentano la visualizzazione del contenuto di Iodio in maniera più immediata e facilmente leggibile.
+					</aside>
+				</section>
+
+
+				<!-- Conclusioni: Conclusioni -->
+				<section>
+					<div class='subsection-title'>
+						<h3>Conclusioni</h3>
+					</div>
+
+					<div class="">
+						<p>L'introduzione della DECT nel protocollo stroke permette il riconoscimento precoce delle aree ischemiche con una sensibilità del 73% ed una specificità del 92%.</p>
+						<p><strong>In futuro la DECT potrebbe essere un valido strumento per la diagnosi di stroke</strong></p>
+					</div>
+
+					<aside class="notes">
+						Per concludere, l’introduzione della Dual Energy nel protocollo stroke permette di valutare l’andamento del contenuto di Iodio a livello parenchimale, consentendo il riconoscimento ... <br>
+						Ulteriori studi e lo sviluppo di software più avanzati potrebbero in futuro rendere questa metodica ... consentendo di individuare con maggior sicurezza la presenza di un territorio ischemico.
+					</aside>
+				</section>
+
+				<!-- Grazie -->
+				<section>
+					<div class="section-title">
+						<h2>
+							Grazie
+						</h2>
+					</div>
+					<aside class="notes">
+						
+					</aside>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				autoPlayMedia: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealZoom, RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
