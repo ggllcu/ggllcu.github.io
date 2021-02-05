@@ -34,8 +34,8 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   --heading3-size: 1.55em;
   --heading4-size: 1em;
   --code-font: monospace;
-  --link-color: #ccc;
-  --link-color-hover: white;
+  --link-color: #990000;
+  --link-color-hover: red;
   --selection-background-color: rgba(0, 0, 0, 0.99);
   --selection-color: #fff; }
 
@@ -250,18 +250,18 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
  * LINKS
  *********************************************/
 .reveal a {
-  color: #ccc;
+  color: #990000;
   text-decoration: none;
   transition: color .15s ease; }
 
 .reveal a:hover {
-  color: white;
+  color: red;
   text-shadow: none;
   border: none; }
 
 .reveal .roll span:after {
   color: #fff;
-  background: #a6a6a6; }
+  background: #4d0000; }
 
 /*********************************************
  * Frame helper
@@ -274,21 +274,21 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   transition: all .15s linear; }
 
 .reveal a:hover .r-frame {
-  border-color: #ccc;
+  border-color: #990000;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
 .reveal .controls {
-  color: #ccc; }
+  color: #990000; }
 
 /*********************************************
  * PROGRESS BAR
  *********************************************/
 .reveal .progress {
   background: rgba(0, 0, 0, 0.2);
-  color: #ccc; }
+  color: #990000; }
 
 /*********************************************
  * PRINT BACKGROUND
